@@ -1,9 +1,9 @@
 public class Dollor extends Money {
-    Dollor(int amount) {
-        this.amount = amount;
+    Dollor(int amount, String currency) {
+        super(amount, currency);
     }
 
     Dollor times(int multiplier) {
-        return new Dollor(this.amount * multiplier);
+        return Money.dollar(this.amount * multiplier);
     }
 }
