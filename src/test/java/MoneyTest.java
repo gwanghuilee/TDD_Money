@@ -10,5 +10,7 @@ class MoneyTest {
         Dollor five = new Dollor(5);
         five.times(2);
         Assertions.assertEquals(10, five.amount);
+        five.times(3);
+        Assertions.assertEquals(15, five.amount);
     }
 }
