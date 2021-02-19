@@ -13,4 +13,10 @@ class MoneyTest {
         product = five.times(3);
         Assertions.assertEquals(15, product.amount);
     }
+
+    @Test
+    @DisplayName("test equality between dollor objects")
+    void testEquality() {
+        Assertions.assertEquals(new Dollor(5), new Dollor(5));
+    }
 }
