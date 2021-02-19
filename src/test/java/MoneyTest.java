@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,9 +18,11 @@ class MoneyTest {
     }
 
     @Test
-    @DisplayName("test equality between dollar objects")
+    @DisplayName("test equality between Money objects")
     void testEquality() {
         Assertions.assertEquals(new Dollor(5), new Dollor(5));
         Assertions.assertNotEquals(new Dollor(5), new Dollor(6));
+        Assertions.assertEquals(new Franc(5), new Franc(5));
+        Assertions.assertNotEquals(new Franc(5), new Franc(6));
     }
 }
