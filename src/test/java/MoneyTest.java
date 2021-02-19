@@ -24,5 +24,6 @@ class MoneyTest {
         Assertions.assertNotEquals(new Dollor(5), new Dollor(6));
         Assertions.assertEquals(new Franc(5), new Franc(5));
         Assertions.assertNotEquals(new Franc(5), new Franc(6));
+        Assertions.assertNotEquals(new Dollor(5), new Franc(5));
     }
 }
