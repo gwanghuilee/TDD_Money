@@ -1,5 +1,5 @@
 public class Franc {
-    private int amount;
+    private final int amount;
 
     Franc(int amount) {
         this.amount = amount;
@@ -9,6 +9,7 @@ public class Franc {
         return new Franc(this.amount * multiplier);
     }
 
+    @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         Franc franc = (Franc) object;

@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Dollor {
     private int amount;
 
@@ -11,6 +9,7 @@ public class Dollor {
         return new Dollor(this.amount * multiplier);
     }
 
+    @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         Dollor dollor = (Dollor) object;
