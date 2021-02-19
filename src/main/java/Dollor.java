@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Dollor {
-    int amount;
+    private int amount;
 
     Dollor(int amount) {
         this.amount = amount;
