@@ -1,12 +1,12 @@
 public class Franc extends Money {
     private String currency;
-    Franc(int amount) {
+    Franc(int amount, String currency) {
         this.amount = amount;
-        currency = "CHF";
+        this.currency = currency;
     }
 
     Franc times(int multiplier) {
-        return new Franc(this.amount * multiplier);
+        return Money.franc(this.amount * multiplier);
     }
 
     String currency() {

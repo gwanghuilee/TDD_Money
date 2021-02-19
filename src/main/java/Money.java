@@ -2,11 +2,11 @@ public abstract class Money {
     protected int amount;
 
     static Dollor dollar(int amount) {
-        return new Dollor(amount);
+        return new Dollor(amount, "USD");
     }
 
     static Franc franc(int amount) {
-        return new Franc(amount);
+        return new Franc(amount, "CHF");
     }
 
     abstract Money times(int multiplier);
