@@ -13,6 +13,7 @@ public class Dollor {
 
     public boolean equals(Object object) {
         if (this == object) return true;
-        return true;
+        Dollor dollor = (Dollor) object;
+        return amount == dollor.amount;
     }
 }
