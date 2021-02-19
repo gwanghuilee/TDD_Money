@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class MoneyTest {
     @Test
-    @DisplayName("test multiplecation")
+    @DisplayName("test multiplication")
     void testMultiplication() {
         Dollor five = new Dollor(5);
         five.times(2);
