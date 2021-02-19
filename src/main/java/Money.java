@@ -11,6 +11,8 @@ public abstract class Money {
 
     abstract Money times(int multiplier);
 
+    abstract String currency();
+
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
@@ -18,4 +20,6 @@ public abstract class Money {
         return amount == money.amount &&
                 getClass().equals(money.getClass());
     }
+
+
 }

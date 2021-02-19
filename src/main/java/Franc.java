@@ -6,4 +6,8 @@ public class Franc extends Money {
     Franc times(int multiplier) {
         return new Franc(this.amount * multiplier);
     }
+
+    String currency() {
+        return "CHF";
+    }
 }
