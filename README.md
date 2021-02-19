@@ -9,3 +9,7 @@ Test-Driven Development By Example Money Project
 - amount를 private으로 만들기
 - ~~Dollor 부작용?~~
 - Money 반올림?
+- ~~equals()~~
+- hashCode()
+- Equal null
+- Equal object
