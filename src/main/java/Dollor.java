@@ -1,6 +1,8 @@
 public class Dollor extends Money {
+    private String currency;
     Dollor(int amount) {
         this.amount = amount;
+        currency = "USD";
     }
 
     Dollor times(int multiplier) {
@@ -8,6 +10,6 @@ public class Dollor extends Money {
     }
 
     String currency() {
-        return "USD";
+        return currency;
     }
 }
