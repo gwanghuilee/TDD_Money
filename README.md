@@ -19,3 +19,4 @@ Test-Driven Development By Example Money Project
 - 공용 times
 - ~~Franc과 Dollar 비교하기~~
 - 통화?
+- testFrancMultiplication 제거
