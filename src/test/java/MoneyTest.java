@@ -15,7 +15,7 @@ class MoneyTest {
     }
 
     @Test
-    @DisplayName("test equality between dollor objects")
+    @DisplayName("test equality between dollar objects")
     void testEquality() {
         Assertions.assertEquals(new Dollor(5), new Dollor(5));
         Assertions.assertNotEquals(new Dollor(5), new Dollor(6));
