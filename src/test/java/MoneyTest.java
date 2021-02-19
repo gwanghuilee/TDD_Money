@@ -6,7 +6,7 @@ class MoneyTest {
     @Test
     @DisplayName("test multiplication")
     void testDollarMultiplication() {
-        Dollor five = new Dollor(5);
+        Money five = Money.dollar(5);
         Assertions.assertEquals(new Dollor(10), five.times(2));
         Assertions.assertEquals(new Dollor(15), five.times(3));
     }

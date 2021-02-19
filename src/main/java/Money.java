@@ -1,5 +1,11 @@
-public class Money {
+public abstract class Money {
     protected int amount;
+
+    static Dollor dollar(int amount) {
+        return new Dollor(amount);
+    }
+
+    abstract Money times(int multiplier);
 
     @Override
     public boolean equals(Object object) {
