@@ -3,8 +3,7 @@ public class Dollor {
     Dollor(int amount) {
         this.amount = amount;
     }
-    void times(int multiplier) {
-        amount *= multiplier;
+    Dollor times(int multiplier) {
+        return new Dollor(this.amount * multiplier);
     }
-
 }

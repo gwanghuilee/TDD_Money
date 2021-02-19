@@ -8,9 +8,9 @@ class MoneyTest {
     @DisplayName("test multiplication")
     void testMultiplication() {
         Dollor five = new Dollor(5);
-        five.times(2);
-        Assertions.assertEquals(10, five.amount);
-        five.times(3);
-        Assertions.assertEquals(15, five.amount);
+        Dollor product = five.times(2);
+        Assertions.assertEquals(10, product.amount);
+        product = five.times(3);
+        Assertions.assertEquals(15, product.amount);
     }
 }
