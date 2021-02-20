@@ -1,4 +1,4 @@
-public class Money {
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -7,12 +7,12 @@ public class Money {
         this.currency = currency;
     }
 
-    static Dollar dollar(int amount) {
-        return new Dollar(amount, "USD");
+    static Money dollar(int amount) {
+        return new Money(amount, "USD");
     }
 
-    static Franc franc(int amount) {
-        return new Franc(amount, "CHF");
+    static Money franc(int amount) {
+        return new Money(amount, "CHF");
     }
 
     Money times(int multiplier) {
@@ -29,6 +29,10 @@ public class Money {
         Money money = (Money) object;
         return amount == money.amount &&
                 currency().equals(money.currency());
+    }
+
+    Expression plus(Money addend) {
+        return new Money(amount + addend.amount, currency);
     }
 
     public String toString() {

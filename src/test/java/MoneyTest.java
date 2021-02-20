@@ -5,16 +5,10 @@ import org.junit.jupiter.api.Test;
 class MoneyTest {
     @Test
     @DisplayName("test multiplication")
-    void testDollarMultiplication() {
+    void testMultiplication() {
         Money five = Money.dollar(5);
         Assertions.assertEquals(Money.dollar(10), five.times(2));
         Assertions.assertEquals(Money.dollar(15), five.times(3));
-    }
-
-    void testFrancMultiplication() {
-        Money five = Money.franc(5);
-        Assertions.assertEquals(Money.franc(10), five.times(2));
-        Assertions.assertEquals(Money.franc(15), five.times(3));
     }
 
     @Test
@@ -22,8 +16,6 @@ class MoneyTest {
     void testEquality() {
         Assertions.assertEquals(Money.dollar(5), Money.dollar(5));
         Assertions.assertNotEquals(Money.dollar(5), Money.dollar(6));
-        Assertions.assertEquals(Money.franc(5), Money.franc(5));
-        Assertions.assertNotEquals(Money.franc(5), Money.franc(6));
         Assertions.assertNotEquals(Money.dollar(5), Money.franc(5));
     }
 
@@ -34,8 +26,11 @@ class MoneyTest {
     }
 
     @Test
-    void testDifferentClassEquality() {
-        Assertions.assertEquals(new Money(10, "CHF"),
-                new Franc(10, "CHF"));
+    void testSimpleAddition() {
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(five);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+        Assertions.assertEquals(Money.dollar(10), reduced);
     }
 }
