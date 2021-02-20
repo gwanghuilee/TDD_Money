@@ -65,4 +65,15 @@ class MoneyTest {
         Money result = bank.reduce(Money.franc(2), "USD");
         Assertions.assertEquals(Money.dollar(1), result);
     }
+
+    @Test
+    void testPairEquals() {
+        Assertions.assertEquals(new Pair("CHF", "USD"), new Pair("CHF", "USD"));
+        Assertions.assertNotEquals(new Pair("USD", "CHF"), new Pair("CHF", "USD"));
+    }
+
+    @Test
+    void testIdentityRate() {
+        Assertions.assertEquals(1, new Bank().rate("USD", "USD"));
+    }
 }
