@@ -12,9 +12,9 @@ Test-Driven Development By Example Money Project
 
 - ~~Bank.reduce(Money)~~
 
-- Money에 대한 통화 변환을 수행하는 Reduce
+- ~~Money에 대한 통화 변환을 수행하는 Reduce~~
 
-- Reduce(Bank, String)
+- ~~Reduce(Bank, String)~~
 
 - ~~$5 x 2 = $10~~
 
