@@ -50,4 +50,4 @@ Test-Driven Development By Example Money Project
 
 - ~~testFrancMultiplication 제거~~
 
-- 한번 열씸히 해 보자!!!
+- 한번 열심히 해 보자!!!
